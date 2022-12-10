@@ -1,0 +1,22 @@
+<div class="exchange-rate-search">
+  <mat-form-field>
+    <mat-label>Clearable input</mat-label>
+    <input matInput type="text" [(ngModel)]="searchValue" (keydown)="searchCurrency()" (ngModelChange)="searchCurrency()">
+    <button *ngIf="searchValue" matSuffix mat-icon-button aria-label="Clear" (click)="clearSearch()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="error">Error :(</div>
+<div *ngIf="filteredRates" class="exchange-rate-grid">
+  <div *ngFor="let rate of filteredRates" >
+    <exchange-rate-card [rate]="rate"></exchange-rate-card>
+
+<!--    <div class="card exchange-rate-card" appHighlight="blue">-->
+<!--      <div class="exchange-rate-card__currency">{{rate.currency | lowercase}}</div>-->
+<!--      <div class="exchange-rate-card__rate">{{rate.rate | currency}}</div>-->
+<!--    </div>-->
+  </div>
+</div>

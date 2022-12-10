@@ -1,0 +1,27 @@
+.exchange-rate-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.exchange-rate-card{
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 15px;
+  max-width: 300px;
+  display: flex;
+}
+
+/*.exchange-rate-card:hover {*/
+/*  background: aliceblue;*/
+/*}*/
+
+.exchange-rate-card__currency{
+  border-right: 1px solid black;
+  padding-right: 15px;
+}
+
+.exchange-rate-card__rate {
+  padding-left: 15px;
+}
