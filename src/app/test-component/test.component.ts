@@ -14,7 +14,7 @@ export class TestComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log("onInit");
+    // console.log("onInit");
     this.service.test().subscribe((value) => {
       this.numbers.push(value);
     })
